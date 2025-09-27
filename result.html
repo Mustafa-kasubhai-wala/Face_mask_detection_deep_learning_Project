@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Prediction Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    img {
+      width: 300px;
+      height: auto;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .label {
+      font-size: 24px;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 8px;
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔍 Prediction Result</h1>
+  <img src="{{ image_path }}" alt="Uploaded Image">
+  <div class="label" style="background-color: {{ color }};">
+    {{ label }}
+  </div>
+  <br><br>
+  <a href="{{ url_for('home') }}" style="color: #00aaff;">Try Another Image</a>
+</body>
+</html>

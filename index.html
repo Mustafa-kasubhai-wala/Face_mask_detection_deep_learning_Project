@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Face Mask Detection</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      text-align: center;
+      padding: 50px;
+    }
+    input[type=file] {
+      margin: 20px;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <h1>🧠 Face Mask Detection</h1>
+  <p>Upload an image to check if the person is wearing a mask.</p>
+  
+  <form action="{{ url_for('predict') }}" method="post" enctype="multipart/form-data">
+    <input type="file" name="file" accept="image/*" required>
+    <br>
+    <button type="submit">Upload & Predict</button>
+  </form>
+  <a href="{{ url_for('live') }}" style="color:#00aaff;">🎥 Live Detection</a>
+</body>
+</html>
